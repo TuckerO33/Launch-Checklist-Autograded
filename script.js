@@ -1,3 +1,5 @@
+const scriptHelper = require("./scriptHelper");
+
 // Write your JavaScript code here!
 
 window.addEventListener("load", function() {
@@ -12,5 +14,12 @@ window.addEventListener("load", function() {
         console.log(listedPlanets);
         // Below this comment call the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
     })
-    
+    let button = document.getElementById("formSubmit");
+    button.addEventListener("click", function(){
+        scriptHelper.formSubmission(document.getElementById("launchForm"),document.getElementById("testForm"),
+        document.getElementById("pilotName"),document.getElementById("copilotName"),
+        document.getElementById("fuelLevel"),document.getElementById("cargoMass"),);
+        preventDefault();
+    })
+
  });
