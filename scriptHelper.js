@@ -24,23 +24,29 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     }
     if (isNaN(Number(testInput))) {
         return validity = "Not a Number";
-    }
-    if (!isNaN(Number(testInput))) {
-        return validity = "Is a Number";
+    } else {
+        return validity = "Is a Number"
     }
 }
  
+;
+
  function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
     if (validateInput(document) === "Empty" || validateInput(list) === "Empty" ||
     validateInput(pilot) === "Empty" || validateInput(copilot) === "Empty" ||
     validateInput(fuelLevel) === "Empty" || validateInput(cargoLevel) === "Empty") {
-        alert("All fields are required");
-    }
-    if (!(validateInput(document) !== "Empty" && validateInput(list) !== "Empty" && 
-    validateInput(pilot) === "Not a Number" && validateInput(copilot) === "Not a Number" && 
-    validateInput(fuelLevel) === "Is a Number" && validateInput(cargoLevel) === "Is a Number")) {
-        alert("Pilot and Copilot need names (not numbers!) and the Fuel Level and Cargo Level need numbers (not names!)")
-    }
+       return window.alert("All fields are required");
+    };
+    if (!(validateInput(pilot) === "Not a Number" && validateInput(copilot) === "Not a Number" && 
+    (validateInput(fuelLevel)) === "Is a Number" && (validateInput(cargoLevel)) === "Is a Number")) {
+        console.log(pilot, copilot, fuelLevel, cargoLevel);
+       return window.alert("Pilot and Copilot need names (not numbers!) and the Fuel Level and Cargo Level need numbers (not names!)")
+    
+    };
+       list.setAttribute("style", "");
+       
+
+
         
  }
  
